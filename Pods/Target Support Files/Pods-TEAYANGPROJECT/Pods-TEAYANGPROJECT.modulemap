@@ -1,0 +1,6 @@
+framework module Pods_TEAYANGPROJECT {
+  umbrella header "Pods-TEAYANGPROJECT-umbrella.h"
+
+  export *
+  module * { export * }
+}

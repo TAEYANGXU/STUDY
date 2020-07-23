@@ -1,0 +1,6 @@
+framework module Pods_TEAYANGPROJECT_TEAYANGPROJECTUITests {
+  umbrella header "Pods-TEAYANGPROJECT-TEAYANGPROJECTUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -17,12 +17,15 @@
 		1BB7BE3224C7E1B50008DC00 /* TEAYANGPROJECTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE3124C7E1B50008DC00 /* TEAYANGPROJECTUITests.swift */; };
 		1BB7BE4024C7E5B50008DC00 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE3F24C7E5B50008DC00 /* MainViewController.swift */; };
 		1BB7BE4224C815B90008DC00 /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE4124C815B90008DC00 /* OneViewController.swift */; };
-		1BB7BE4524C935860008DC00 /* FTAFSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE4424C935860008DC00 /* FTAFSessionManager.swift */; };
+		1BB7BE4524C935860008DC00 /* FTAFHTTPSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE4424C935860008DC00 /* FTAFHTTPSessionManager.swift */; };
 		1BB7BE4924C9540A0008DC00 /* TEST.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE4824C9540A0008DC00 /* TEST.m */; };
 		1BB7BE4C24C9587D0008DC00 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE4A24C9587C0008DC00 /* NSString+UUID.m */; };
 		1BB7BE4F24C958F70008DC00 /* KeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE4E24C958F60008DC00 /* KeyChainStore.m */; };
 		1BB7BE5124C970760008DC00 /* FTUserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE5024C970760008DC00 /* FTUserInfoModel.swift */; };
 		1BB7BE5424C980390008DC00 /* FTResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE5324C980380008DC00 /* FTResponseModel.swift */; };
+		1BB7BE5A24CA6A560008DC00 /* FTAFHTTPTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE5924CA6A560008DC00 /* FTAFHTTPTarget.swift */; };
+		1BB7BE5C24CA75890008DC00 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE5B24CA75890008DC00 /* String+Extension.swift */; };
+		1BB7BE5E24CA761A0008DC00 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE5D24CA761A0008DC00 /* UIDevice+Extension.swift */; };
 		24452B0C8FFF8DC9F76D2589 /* Pods_TEAYANGPROJECT_TEAYANGPROJECTUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF1689372D6F2FB8AB0E89A /* Pods_TEAYANGPROJECT_TEAYANGPROJECTUITests.framework */; };
 		449F2B76CC0F4F93167F84EF /* Pods_TEAYANGPROJECT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1498D22261025F1185E6967 /* Pods_TEAYANGPROJECT.framework */; };
 		8FCEB57E401056CABD67B138 /* Pods_TEAYANGPROJECTTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C43F9E4B9CAB932BB6326EF /* Pods_TEAYANGPROJECTTests.framework */; };
@@ -64,7 +67,7 @@
 		1BB7BE3324C7E1B50008DC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BB7BE3F24C7E5B50008DC00 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1BB7BE4124C815B90008DC00 /* OneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
-		1BB7BE4424C935860008DC00 /* FTAFSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTAFSessionManager.swift; sourceTree = "<group>"; };
+		1BB7BE4424C935860008DC00 /* FTAFHTTPSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTAFHTTPSessionManager.swift; sourceTree = "<group>"; };
 		1BB7BE4624C954090008DC00 /* TEAYANGPROJECT-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TEAYANGPROJECT-Bridging-Header.h"; sourceTree = "<group>"; };
 		1BB7BE4724C9540A0008DC00 /* TEST.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TEST.h; sourceTree = "<group>"; };
 		1BB7BE4824C9540A0008DC00 /* TEST.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TEST.m; sourceTree = "<group>"; };
@@ -74,6 +77,9 @@
 		1BB7BE4E24C958F60008DC00 /* KeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyChainStore.m; sourceTree = "<group>"; };
 		1BB7BE5024C970760008DC00 /* FTUserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTUserInfoModel.swift; sourceTree = "<group>"; };
 		1BB7BE5324C980380008DC00 /* FTResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTResponseModel.swift; sourceTree = "<group>"; };
+		1BB7BE5924CA6A560008DC00 /* FTAFHTTPTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTAFHTTPTarget.swift; sourceTree = "<group>"; };
+		1BB7BE5B24CA75890008DC00 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		1BB7BE5D24CA761A0008DC00 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		4E587F781EC08D82A50FD952 /* Pods-TEAYANGPROJECT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEAYANGPROJECT.release.xcconfig"; path = "Target Support Files/Pods-TEAYANGPROJECT/Pods-TEAYANGPROJECT.release.xcconfig"; sourceTree = "<group>"; };
 		552EA6FF0DFA2FAD138E21A3 /* Pods-TEAYANGPROJECT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEAYANGPROJECT.debug.xcconfig"; path = "Target Support Files/Pods-TEAYANGPROJECT/Pods-TEAYANGPROJECT.debug.xcconfig"; sourceTree = "<group>"; };
 		7C43F9E4B9CAB932BB6326EF /* Pods_TEAYANGPROJECTTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TEAYANGPROJECTTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,7 +151,7 @@
 				1BB7BE1D24C7E1B40008DC00 /* Info.plist */,
 				1BB7BE3F24C7E5B50008DC00 /* MainViewController.swift */,
 				1BB7BE4124C815B90008DC00 /* OneViewController.swift */,
-				1BB7BE4424C935860008DC00 /* FTAFSessionManager.swift */,
+				1BB7BE4424C935860008DC00 /* FTAFHTTPSessionManager.swift */,
 				1BB7BE5024C970760008DC00 /* FTUserInfoModel.swift */,
 				1BB7BE4D24C958F60008DC00 /* KeyChainStore.h */,
 				1BB7BE4E24C958F60008DC00 /* KeyChainStore.m */,
@@ -155,6 +161,9 @@
 				1BB7BE4824C9540A0008DC00 /* TEST.m */,
 				1BB7BE4624C954090008DC00 /* TEAYANGPROJECT-Bridging-Header.h */,
 				1BB7BE5324C980380008DC00 /* FTResponseModel.swift */,
+				1BB7BE5924CA6A560008DC00 /* FTAFHTTPTarget.swift */,
+				1BB7BE5B24CA75890008DC00 /* String+Extension.swift */,
+				1BB7BE5D24CA761A0008DC00 /* UIDevice+Extension.swift */,
 			);
 			path = TEAYANGPROJECT;
 			sourceTree = "<group>";
@@ -441,9 +450,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BB7BE5124C970760008DC00 /* FTUserInfoModel.swift in Sources */,
+				1BB7BE5E24CA761A0008DC00 /* UIDevice+Extension.swift in Sources */,
 				1BB7BE1424C7E1AD0008DC00 /* ViewController.swift in Sources */,
-				1BB7BE4524C935860008DC00 /* FTAFSessionManager.swift in Sources */,
+				1BB7BE4524C935860008DC00 /* FTAFHTTPSessionManager.swift in Sources */,
 				1BB7BE4224C815B90008DC00 /* OneViewController.swift in Sources */,
+				1BB7BE5C24CA75890008DC00 /* String+Extension.swift in Sources */,
 				1BB7BE1024C7E1AD0008DC00 /* AppDelegate.swift in Sources */,
 				1BB7BE5424C980390008DC00 /* FTResponseModel.swift in Sources */,
 				1BB7BE4F24C958F70008DC00 /* KeyChainStore.m in Sources */,
@@ -451,6 +462,7 @@
 				1BB7BE1224C7E1AD0008DC00 /* SceneDelegate.swift in Sources */,
 				1BB7BE4024C7E5B50008DC00 /* MainViewController.swift in Sources */,
 				1BB7BE4924C9540A0008DC00 /* TEST.m in Sources */,
+				1BB7BE5A24CA6A560008DC00 /* FTAFHTTPTarget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

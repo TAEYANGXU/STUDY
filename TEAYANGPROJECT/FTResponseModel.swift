@@ -28,8 +28,8 @@ struct FTResponseModel: Mappable {
     
     var code : Int = 200
     var msg : String?
-    var data : Any?
     var serverTime : Int32?
+    var data : Any?
     
     init?(map: Map) {
     }
@@ -41,3 +41,14 @@ struct FTResponseModel: Mappable {
         data <- map["data"]
     }
 }
+
+struct FTErrorModel
+{
+    var code : Int?
+    var errorMsg : String?
+    init(code: Int, errorMsg: String) {
+        self.code = code
+        self.errorMsg = errorMsg
+    }
+}
+

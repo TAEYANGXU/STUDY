@@ -78,16 +78,34 @@ class OneViewController: UIViewController {
 //
 //        textFiled.rx.text.bind(to: button.rx.title()).disposed(by: disposeBag)
         
-//        FTAFSessionManager.shared.postBody(URLString: "http://zeus-api-test.qingsongfe.com:58080/api/v1/contract/Remove", parameters: [["id":"105"]], success: { (data) in
+//        FTAFHTTPSessionManager.shared.postBody(target: FTHTTPTarget(path: "/api/v1/contract/Remove", pararms: [["id":"105"]], method: .POSTBODY, serverType: .QS), success: { (data) in
 //
 //        }) { (error) in
 //
 //        }
-        FTAFSessionManager.shared.get(URLString: "http://zeus-api-test.qingsongfe.com:58080/api/v1/notification/GetUnreadCounts", parameters: ["TradeToken":""], success: { (data) in
-            
+//        FTAFHTTPSessionManager.shared.get(target: FTHTTPTarget(path: "/api/v1/user/Get", pararms: [], method: .GET, serverType: .QS), success: { (data) in
+//
+//        }) { (error) in
+//
+//        }
+        
+        FTAFHTTPSessionManager.shared.get(target: FTHTTPTarget(path: "/v3/video/get-recomends", pararms: [], method: .GET, serverType: .HS), success: { (model,data) in
+            let array:Array = model.data as! Array<Any>
+            let list : Array<FTRecomendsModel> = Mapper<FTRecomendsModel>().mapArray(JSONObject: array)!
+            for model in list {
+                print("\(String(describing: model.act?.actName))")
+            }
         }) { (error) in
-            
+            debugPrint("\(String(describing: error.errorMsg))")
         }
+        
+        
+//        FTAFHTTPSessionManager.shared.get(URLString: "http://zeus-api-test.qingsongfe.com:58080/api/v1/notification/GetUnreadCounts", parameters: ["TradeToken":""], success: { (data) in
+//            
+//        }) { (error) in
+//            
+//        }
+        
         
 //        http://zeus-api-test.qingsongfe.com:58080/api/v1/notification/GetUnreadCounts?TradeToken=
 //        FTAFSessionManager.shared.get(URLString: "http://zeus-api-test.qingsongfe.com:58080/api/v1/user/Get", parameters: ["":""], success: { (data) in
@@ -134,12 +152,11 @@ class OneViewController: UIViewController {
         
 //        Alamofire.Request.
         
-        
+//        TEST { (model, json) in
+//            
+//        }
         
     }
-    
-    
-
     /*
     // MARK: - Navigation
 

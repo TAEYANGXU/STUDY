@@ -37,3 +37,49 @@ struct FTUserInfoModel: Mappable {
         nickname <- map["nickname"]
     }
 }
+
+struct FTRecomendsModel: Mappable {
+    
+    var act: FTActModel?
+    var video: FTVideoModel?
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        act <- map["act"]
+        video <- map["video"]
+    }
+}
+
+struct FTActModel: Mappable {
+    
+    var actName: String?
+    var des: String?
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        actName <- map["actName"]
+        des <- map["des"]
+    }
+}
+
+
+struct FTVideoModel: Mappable {
+    
+    var vTitle: String?
+    var vContent: String?
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        vTitle <- map["vTitle"]
+        vContent <- map["vContent"]
+    }
+}

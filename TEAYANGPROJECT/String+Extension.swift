@@ -60,11 +60,8 @@ public extension String
         guard let utf8Data = decodeData else{
             return nil
         }
-        
         let decodedStr:String? = String.init(data: utf8Data, encoding: String.Encoding.utf8)
-        
         return decodedStr
-        
     }
     
     func base64encode() -> String? {
@@ -73,13 +70,10 @@ public extension String
         guard let utf8Data = utf8str else{
             return nil
         }
-        
         let base64Encoded:String = utf8Data.base64EncodedString(options: Data.Base64EncodingOptions.init(rawValue: 0))
         return base64Encoded
     }
-    
 }
-
 
 extension String
 {
@@ -90,5 +84,21 @@ extension String
             return dict
         }
         return nil
+    }
+}
+
+
+public extension String
+{
+    static func getUUIDByKeyChain() -> String
+    {
+        let bundle : String = Bundle.main.bundleIdentifier ?? ""
+        var strUUID : String = FTKeychainStore.keyChainReadData(identifier: bundle) as! String
+        if strUUID.count == 0 {
+            let uuidRef = CFUUIDCreate(kCFAllocatorDefault)
+            strUUID = CFUUIDCreateString(kCFAllocatorDefault,uuidRef)! as String
+        }
+        FTKeychainStore.keyChainSaveData(data: strUUID, withIdentifier: bundle)
+        return strUUID
     }
 }

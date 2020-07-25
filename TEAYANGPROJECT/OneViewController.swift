@@ -83,11 +83,11 @@ class OneViewController: UIViewController {
 //        }) { (error) in
 //
 //        }
-//        FTAFHTTPSessionManager.shared.get(target: FTHTTPTarget(path: "/api/v1/user/Get", pararms: [], method: .GET, serverType: .QS), success: { (data) in
-//
-//        }) { (error) in
-//
-//        }
+        FTAFHTTPSessionManager.shared.get(target: FTHTTPTarget(path: "/api/v1/user/Get", pararms: [], method: .GET, serverType: .QS), success: { (model ,data) in
+
+        }) { (error) in
+
+        }
         
 //        FTAFHTTPSessionManager.shared.get(target: FTHTTPTarget(path: "/v3/video/get-recomends", pararms: [], method: .GET, serverType: .HS), success: { (model,data) in
 //            let array:Array = model.data as! Array<Any>
@@ -99,12 +99,12 @@ class OneViewController: UIViewController {
 //            debugPrint("\(String(describing: error.errorMsg))")
 //        }
         
-        FTAFHTTPSessionManager.shared.get(target: FTHTTPTarget(path: "/api/v1/user/userinfo", pararms: [], method: .GET, serverType: .QZC), success: { (model, data) in
-            let dict:Dictionary = model.data as! Dictionary<String, Any>
-            print("dict : \(dict)")
-        }) { (error) in
-            
-        }
+//        FTAFHTTPSessionManager.shared.get(target: FTHTTPTarget(path: "/api/v1/user/userinfo", pararms: [], method: .GET, serverType: .QZC), success: { (model, data) in
+//            let dict:Dictionary = model.data as! Dictionary<String, Any>
+//            print("dict : \(dict)")
+//        }) { (error) in
+//
+//        }
         
 //        FTAFHTTPSessionManager.shared.get(URLString: "http://zeus-api-test.qingsongfe.com:58080/api/v1/notification/GetUnreadCounts", parameters: ["TradeToken":""], success: { (data) in
 //            

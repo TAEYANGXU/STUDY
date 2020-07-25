@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B79133124CBFF1D0060BA2C /* FTKeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B79133024CBFF1D0060BA2C /* FTKeychainStore.swift */; };
 		1BB7BE1024C7E1AD0008DC00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE0F24C7E1AD0008DC00 /* AppDelegate.swift */; };
 		1BB7BE1224C7E1AD0008DC00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE1124C7E1AD0008DC00 /* SceneDelegate.swift */; };
 		1BB7BE1424C7E1AD0008DC00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE1324C7E1AD0008DC00 /* ViewController.swift */; };
@@ -18,8 +19,6 @@
 		1BB7BE4024C7E5B50008DC00 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE3F24C7E5B50008DC00 /* MainViewController.swift */; };
 		1BB7BE4224C815B90008DC00 /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE4124C815B90008DC00 /* OneViewController.swift */; };
 		1BB7BE4524C935860008DC00 /* FTAFHTTPSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE4424C935860008DC00 /* FTAFHTTPSessionManager.swift */; };
-		1BB7BE4C24C9587D0008DC00 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE4A24C9587C0008DC00 /* NSString+UUID.m */; };
-		1BB7BE4F24C958F70008DC00 /* KeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE4E24C958F60008DC00 /* KeyChainStore.m */; };
 		1BB7BE5124C970760008DC00 /* FTUserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE5024C970760008DC00 /* FTUserInfoModel.swift */; };
 		1BB7BE5424C980390008DC00 /* FTResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE5324C980380008DC00 /* FTResponseModel.swift */; };
 		1BB7BE5A24CA6A560008DC00 /* FTAFHTTPTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7BE5924CA6A560008DC00 /* FTAFHTTPTarget.swift */; };
@@ -50,6 +49,7 @@
 /* Begin PBXFileReference section */
 		095C8587E466BF174168E5A0 /* Pods-TEAYANGPROJECTTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEAYANGPROJECTTests.debug.xcconfig"; path = "Target Support Files/Pods-TEAYANGPROJECTTests/Pods-TEAYANGPROJECTTests.debug.xcconfig"; sourceTree = "<group>"; };
 		10A77E245034FAD6AB6D26AF /* Pods-TEAYANGPROJECTTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEAYANGPROJECTTests.release.xcconfig"; path = "Target Support Files/Pods-TEAYANGPROJECTTests/Pods-TEAYANGPROJECTTests.release.xcconfig"; sourceTree = "<group>"; };
+		1B79133024CBFF1D0060BA2C /* FTKeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTKeychainStore.swift; sourceTree = "<group>"; };
 		1BB7BE0C24C7E1AD0008DC00 /* TEAYANGPROJECT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEAYANGPROJECT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB7BE0F24C7E1AD0008DC00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BB7BE1124C7E1AD0008DC00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,10 +68,6 @@
 		1BB7BE4124C815B90008DC00 /* OneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
 		1BB7BE4424C935860008DC00 /* FTAFHTTPSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTAFHTTPSessionManager.swift; sourceTree = "<group>"; };
 		1BB7BE4624C954090008DC00 /* TEAYANGPROJECT-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TEAYANGPROJECT-Bridging-Header.h"; sourceTree = "<group>"; };
-		1BB7BE4A24C9587C0008DC00 /* NSString+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UUID.m"; sourceTree = "<group>"; };
-		1BB7BE4B24C9587D0008DC00 /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
-		1BB7BE4D24C958F60008DC00 /* KeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyChainStore.h; sourceTree = "<group>"; };
-		1BB7BE4E24C958F60008DC00 /* KeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyChainStore.m; sourceTree = "<group>"; };
 		1BB7BE5024C970760008DC00 /* FTUserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTUserInfoModel.swift; sourceTree = "<group>"; };
 		1BB7BE5324C980380008DC00 /* FTResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTResponseModel.swift; sourceTree = "<group>"; };
 		1BB7BE5924CA6A560008DC00 /* FTAFHTTPTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTAFHTTPTarget.swift; sourceTree = "<group>"; };
@@ -150,15 +146,12 @@
 				1BB7BE4124C815B90008DC00 /* OneViewController.swift */,
 				1BB7BE4424C935860008DC00 /* FTAFHTTPSessionManager.swift */,
 				1BB7BE5024C970760008DC00 /* FTUserInfoModel.swift */,
-				1BB7BE4D24C958F60008DC00 /* KeyChainStore.h */,
-				1BB7BE4E24C958F60008DC00 /* KeyChainStore.m */,
-				1BB7BE4B24C9587D0008DC00 /* NSString+UUID.h */,
-				1BB7BE4A24C9587C0008DC00 /* NSString+UUID.m */,
 				1BB7BE4624C954090008DC00 /* TEAYANGPROJECT-Bridging-Header.h */,
 				1BB7BE5324C980380008DC00 /* FTResponseModel.swift */,
 				1BB7BE5924CA6A560008DC00 /* FTAFHTTPTarget.swift */,
 				1BB7BE5B24CA75890008DC00 /* String+Extension.swift */,
 				1BB7BE5D24CA761A0008DC00 /* UIDevice+Extension.swift */,
+				1B79133024CBFF1D0060BA2C /* FTKeychainStore.swift */,
 			);
 			path = TEAYANGPROJECT;
 			sourceTree = "<group>";
@@ -452,9 +445,8 @@
 				1BB7BE5C24CA75890008DC00 /* String+Extension.swift in Sources */,
 				1BB7BE1024C7E1AD0008DC00 /* AppDelegate.swift in Sources */,
 				1BB7BE5424C980390008DC00 /* FTResponseModel.swift in Sources */,
-				1BB7BE4F24C958F70008DC00 /* KeyChainStore.m in Sources */,
-				1BB7BE4C24C9587D0008DC00 /* NSString+UUID.m in Sources */,
 				1BB7BE1224C7E1AD0008DC00 /* SceneDelegate.swift in Sources */,
+				1B79133124CBFF1D0060BA2C /* FTKeychainStore.swift in Sources */,
 				1BB7BE4024C7E5B50008DC00 /* MainViewController.swift in Sources */,
 				1BB7BE5A24CA6A560008DC00 /* FTAFHTTPTarget.swift in Sources */,
 			);

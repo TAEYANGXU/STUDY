@@ -85,10 +85,10 @@ extension FTHTTPTarget : FTHttpBase
             headers.add(name: "CheckSum", value: checkText.sha1())
             headers.add(name: "CurTime", value: timestamp)
             headers.add(name: "Nonce", value: uuid)
-            headers.add(name: "DEVICE", value: NSString.getUUIDByKeyChain())
+            headers.add(name: "DEVICE", value: String.getUUIDByKeyChain())
             headers.add(name: "buildCode", value: minorVersion)
             headers.add(name: "DEVICETOKEN", value: "")
-            headers.add(name: "token", value: "8AlIbdf0MuXDOC9QTbUiPR2FGd23n/vSGJho0MXm1LRoNgOIf2hteGNW+ch5anzGGAHOshI8+yBehTnMAtNkdQ==")
+            headers.add(name: "token", value: "8AlIbdf0MuXDOC9QTbUiPR2FGd23n/vSGJho0MXm1LRoNgOIf2hteGNW+ch5anzG42oOp5uqedQD3EtvKSgTbw==")
         }
         if serverType == .HS
         {
@@ -98,7 +98,7 @@ extension FTHTTPTarget : FTHttpBase
             headers.add(name: "SIGN", value: text.md5())
             headers.add(name: "CHANNEL", value: "zeus_ios")
             headers.add(name: "PROJECT", value: "29")
-            headers.add(name: "TOKEN", value: "8AlIbdf0MuXDOC9QTbUiPR2FGd23n/vSGJho0MXm1LRoNgOIf2hteGNW+ch5anzGGAHOshI8+yBehTnMAtNkdQ==")
+            headers.add(name: "TOKEN", value: "8AlIbdf0MuXDOC9QTbUiPR2FGd23n/vSGJho0MXm1LRoNgOIf2hteGNW+ch5anzG42oOp5uqedQD3EtvKSgTbw==")
         }
         if serverType == .QZC {
             let timestamp = String(format: "\(Int(Date.init().timeIntervalSince1970))");

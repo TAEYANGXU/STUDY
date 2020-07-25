@@ -89,16 +89,22 @@ class OneViewController: UIViewController {
 //
 //        }
         
-        FTAFHTTPSessionManager.shared.get(target: FTHTTPTarget(path: "/v3/video/get-recomends", pararms: [], method: .GET, serverType: .HS), success: { (model,data) in
-            let array:Array = model.data as! Array<Any>
-            let list : Array<FTRecomendsModel> = Mapper<FTRecomendsModel>().mapArray(JSONObject: array)!
-            for model in list {
-                print("\(String(describing: model.act?.actName))")
-            }
-        }) { (error) in
-            debugPrint("\(String(describing: error.errorMsg))")
-        }
+//        FTAFHTTPSessionManager.shared.get(target: FTHTTPTarget(path: "/v3/video/get-recomends", pararms: [], method: .GET, serverType: .HS), success: { (model,data) in
+//            let array:Array = model.data as! Array<Any>
+//            let list : Array<FTRecomendsModel> = Mapper<FTRecomendsModel>().mapArray(JSONObject: array)!
+//            for model in list {
+//                print("\(String(describing: model.act?.actName))")
+//            }
+//        }) { (error) in
+//            debugPrint("\(String(describing: error.errorMsg))")
+//        }
         
+        FTAFHTTPSessionManager.shared.get(target: FTHTTPTarget(path: "/api/v1/user/userinfo", pararms: [], method: .GET, serverType: .QZC), success: { (model, data) in
+            let dict:Dictionary = model.data as! Dictionary<String, Any>
+            print("dict : \(dict)")
+        }) { (error) in
+            
+        }
         
 //        FTAFHTTPSessionManager.shared.get(URLString: "http://zeus-api-test.qingsongfe.com:58080/api/v1/notification/GetUnreadCounts", parameters: ["TradeToken":""], success: { (data) in
 //            

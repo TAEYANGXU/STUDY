@@ -190,11 +190,24 @@ extension FTAFHTTPSessionManager
         })
     }
     
+    //MARK: - token替换
+    private func replaceToken(response: AFDataResponse<Any>)
+    {
+        let headers : Dictionary = (response.request?.allHTTPHeaderFields)!
+        let token : String = headers["token"] ?? ""
+        let status : String = headers["token-status"] ?? ""
+        if status == "new" && token.count > 0 {
+            ///
+        }
+    }
+    
     private func handleResponse(response: AFDataResponse<Any>,
                                 success: @escaping FTResponseSuccess,
-                                failure: @escaping FTResponseFail){
+                                failure: @escaping FTResponseFail)
+    {
         switch response.result {
         case .success:
+            replaceToken(response: response)
             let json = String(data: response.data!, encoding: String.Encoding.utf8)
             print("json :  \(String(describing: json))")
             let dict =  json?.stringValueDictionary(json!)

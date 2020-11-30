@@ -35,6 +35,51 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+//        let mainQ = DispatchQueue.main
+//        mainQ.async {
+//            print("-----------1")
+//        }
+//        mainQ.async {
+//            sleep(10)
+//            print("-----------2")
+//        }
+//        mainQ.async {
+//            print("-----------3")
+//        }
+//        print("-----------4")
+//
+//        let queue = DispatchQueue(label: "com.custom.thread", qos: DispatchQoS.default, attributes: DispatchQueue.Attributes.concurrent)
+//        queue.async {
+//            print("-----------1")
+//        }
+//        queue.async {
+//            print("-----------2")
+//        }
+//        queue.async {
+//            sleep(4)
+//            print("-----------3")
+//        }
+//        queue.async {
+//            print("-----------4")
+//        }
+//        let queue = DispatchQueue(label: "com.custom.thread", qos: DispatchQoS.default, attributes: DispatchQueue.Attributes.concurrent)
+//        let group = DispatchGroup()
+//        queue.async(group: group) {
+//            print("-----------1")
+//        }
+//        queue.async(group: group) {
+//            print("-----------2")
+//        }
+//        queue.async(group: group) {
+//            sleep(4)
+//            print("-----------3")
+//        }
+//        queue.async(group: group) {
+//            print("-----------4")
+//        }
+//        group.notify(queue: queue) {
+//            print("执行完毕")
+//        }
         
         window?.rootViewController = MainViewController();
         return true

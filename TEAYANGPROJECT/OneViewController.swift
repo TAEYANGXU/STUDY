@@ -83,11 +83,17 @@ class OneViewController: UIViewController {
 //        }) { (error) in
 //
 //        }
-        FTAFHTTPSessionManager.shared.get(target: FTHTTPTarget(path: "/api/v1/user/Get", pararms: [], method: .GET, serverType: .QS), success: { (model ,data) in
-
-        }) { (error) in
-
+//        FTAFHTTPSessionManager.shared.get(target: FTHTTPTarget(path: "/api/v1/user/Get", pararms: [], method: .GET, serverType: .QS), success: { (model ,data) in
+//
+//        }) { (error) in
+//
+//        }
+        
+        FTLiveSocketIOManager.shared.socketIOWithURL(url: "ws://192.168.99.149:8099", wsRoom: "qs:msgLive") { (dara) in
+            
         }
+        
+//        let subject = Asy
         
 //        FTAFHTTPSessionManager.shared.get(target: FTHTTPTarget(path: "/v3/video/get-recomends", pararms: [], method: .GET, serverType: .HS), success: { (model,data) in
 //            let array:Array = model.data as! Array<Any>

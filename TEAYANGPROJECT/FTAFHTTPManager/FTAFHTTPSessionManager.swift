@@ -48,7 +48,7 @@ class FTAFHTTPSessionManager: NSObject
      *  @param success    成功
      *  @param failure    失败
      */
-    func get(target:FTHTTPTarget,
+    func get(target: FTHTTPTarget,
              success: @escaping FTResponseSuccess,
              failure: @escaping FTResponseFail){
         requesttMethod(target: target,
@@ -64,7 +64,7 @@ class FTAFHTTPSessionManager: NSObject
     *  @param success    成功
     *  @param failure    失败
     */
-    func post(target:FTHTTPTarget,
+    func post(target: FTHTTPTarget,
               success: @escaping FTResponseSuccess,
               failure: @escaping FTResponseFail){
         requesttMethod(target: target,
@@ -80,7 +80,7 @@ class FTAFHTTPSessionManager: NSObject
     *  @param success    成功
     *  @param failure    失败
     */
-    func postBody(target:FTHTTPTarget,
+    func postBody(target: FTHTTPTarget,
                   success: @escaping FTResponseSuccess,
                   failure: @escaping FTResponseFail){
         requesttMethod(target: target,
@@ -96,7 +96,7 @@ class FTAFHTTPSessionManager: NSObject
     *  @param success    成功
     *  @param failure    失败
     */
-    func uploadImage(target:FTHTTPTarget,
+    func uploadImage(target: FTHTTPTarget,
                   success: @escaping FTResponseSuccess,
                   failure: @escaping FTResponseFail){
         requesttMethod(target: target,
@@ -112,7 +112,7 @@ class FTAFHTTPSessionManager: NSObject
     *  @param success    成功
     *  @param failure    失败
     */
-    private func requesttMethod(target:FTHTTPTarget, success: @escaping FTResponseSuccess, failure: @escaping FTResponseFail) {
+    private func requesttMethod(target: FTHTTPTarget, success: @escaping FTResponseSuccess, failure: @escaping FTResponseFail) {
         switch target.method {
         case .GET:
             self.getRequest(target: target, success: success, failure: failure)
@@ -132,11 +132,10 @@ class FTAFHTTPSessionManager: NSObject
     }
 }
 
-
 extension FTAFHTTPSessionManager
 {
     //MARK: - POST
-    private func postRequest(target:FTHTTPTarget,
+    private func postRequest(target: FTHTTPTarget,
                     success: @escaping FTResponseSuccess,
                     failure: @escaping FTResponseFail){
         print("POST----URLString : \(target.baseUrl + target.path) \n---- headers : \(target.headers) \n---- parameters : \(String(describing: target.pararms))")
@@ -146,7 +145,7 @@ extension FTAFHTTPSessionManager
     }
     
     //MARK: - POST(BODY)
-    private func postBodyRequest(target:FTHTTPTarget,
+    private func postBodyRequest(target: FTHTTPTarget,
                              success: @escaping FTResponseSuccess,
                              failure: @escaping FTResponseFail){
         let json = JSON.init(target.pararms as Any)
@@ -162,7 +161,7 @@ extension FTAFHTTPSessionManager
     }
     
     //MARK: - GET请求
-    private func getRequest(target:FTHTTPTarget,
+    private func getRequest(target: FTHTTPTarget,
                     success: @escaping FTResponseSuccess,
                     failure: @escaping FTResponseFail){
         print("POST----URLString : \(target.baseUrl + target.path) \n---- headers : \(target.headers) \n---- parameters : \(String(describing: target.pararms))")
@@ -172,7 +171,7 @@ extension FTAFHTTPSessionManager
     }
     
     //MARK: - 上传图片
-    private func uploadImageRequest(target:FTHTTPTarget,
+    private func uploadImageRequest(target: FTHTTPTarget,
                                     success: @escaping FTResponseSuccess,
                                     failure: @escaping FTResponseFail){
         print("POST----URLString : \(target.baseUrl + target.path) \n---- headers : \(target.headers) \n---- parameters : \(String(describing: target.pararms))")
@@ -189,18 +188,22 @@ extension FTAFHTTPSessionManager
             self.handleResponse(response: response, success: success, failure: failure)
         })
     }
-    
+}
+
+extension FTAFHTTPSessionManager
+{
     //MARK: - token替换
     private func replaceToken(response: AFDataResponse<Any>)
     {
-        let headers : Dictionary = (response.request?.allHTTPHeaderFields)!
-        let token : String = headers["token"] ?? ""
-        let status : String = headers["token-status"] ?? ""
+        let headers: Dictionary = (response.request?.allHTTPHeaderFields)!
+        let token: String = headers["token"] ?? ""
+        let status: String = headers["token-status"] ?? ""
         if status == "new" && token.count > 0 {
             ///
         }
     }
     
+    //MARK: - 响应处理
     private func handleResponse(response: AFDataResponse<Any>,
                                 success: @escaping FTResponseSuccess,
                                 failure: @escaping FTResponseFail)

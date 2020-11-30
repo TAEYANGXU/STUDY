@@ -13,6 +13,7 @@ target 'TEAYANGPROJECT' do
   pod 'ObjectMapper'
   pod 'Kingfisher'
   pod 'Moya/RxSwift'
+  pod 'Socket.IO-Client-Swift', '~> 15.2.0'
   # Pods for TEAYANGPROJECT
 
   target 'TEAYANGPROJECTTests' do

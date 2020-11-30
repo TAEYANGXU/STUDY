@@ -67,7 +67,7 @@ protocol FTHttpBase {
     var headers: HTTPHeaders {get}
 }
 
-extension FTHTTPTarget : FTHttpBase
+extension FTHTTPTarget: FTHttpBase
 {
     var headers: HTTPHeaders {
         var headers = HTTPHeaders()
@@ -76,7 +76,7 @@ extension FTHTTPTarget : FTHttpBase
         headers.add(name: "APPVER", value: majorVersion)
         headers.add(name: "PL", value: "iOS")
         headers.add(name: "OS", value: iOSVersion)
-        headers.add(name: "MODEL", value: UIDevice.current.modelName)
+        headers.add(name: "MODEL", value: UIDevice.current.modeName)
         headers.add(name: "User-Agent", value: String(format: "QingSongCaiJing iOS \(iOSVersion)"))
         if serverType == .QS
         {
@@ -100,7 +100,8 @@ extension FTHTTPTarget : FTHttpBase
             headers.add(name: "PROJECT", value: "29")
             headers.add(name: "TOKEN", value: "8AlIbdf0MuXDOC9QTbUiPR2FGd23n/vSGJho0MXm1LRoNgOIf2hteGNW+ch5anzG42oOp5uqedQD3EtvKSgTbw==")
         }
-        if serverType == .QZC {
+        if serverType == .QZC
+        {
             let timestamp = String(format: "\(Int(Date.init().timeIntervalSince1970))");
             let text = String(format: "APPVER=%@&PL=%@&TIMESTAMP=%@%@", majorVersion,"iOS",timestamp,QZCsecretKey)
             headers.add(name: "SIGN", value: text.md5())
@@ -108,7 +109,7 @@ extension FTHTTPTarget : FTHttpBase
             headers.add(name: "DEVICE", value: "dfae2fe2d4fa74966869a9180eae5bf54cdcead1d1ed80aa7b161aae6d3e88ec")
             headers.add(name: "SVTYPE", value: "UM")
             headers.add(name: "CHANNEL", value: "zeus_ios")
-            headers.add(name: "IMEI", value: UIDevice.current.modelName)
+            headers.add(name: "IMEI", value: UIDevice.current.modeName)
             headers.add(name: "TOKEN", value: "tLimOUAXYbEhuuzpTY3gKGRlYWRlN2RlYjhjYWMyNDgzODQ5NGMwMGM4OTJmNzEzMGNiODE0YzM1NTI4ZDk2ZjQ3ZjExNTFhZWMyNTg5YjTDuJhOpiVCVOu7hI3W57aKkCvzkSpXLL1Ro1pr7Y04ICsAeLZhQ7GJTehRNhH7Tc8yq0qUOkyAeQhuA4lR9Czq2YjFoylXSPh2xA/h/WUMqw==")
             headers.add(name: "NET", value: "WIFI")
             headers.add(name: "SVTOKEN", value: "dfae2fe2d4fa74966869a9180eae5bf54cdcead1d1ed80aa7b161aae6d3e88ec")
@@ -125,7 +126,8 @@ extension FTHTTPTarget : FTHttpBase
         {
             url = "http://live-api-test.qingsongfe.com"
         }
-        if serverType == .QZC {
+        if serverType == .QZC
+        {
             url = "http://139.224.196.167:13223"
         }
         return url

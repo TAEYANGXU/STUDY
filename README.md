@@ -1,4 +1,4 @@
 
 
 
-1.网络请求、SocketIO等封装
+1.网络请求类、SocketIO等封装
